@@ -54,7 +54,7 @@ function getApi() {
 
 
 /*
-for (va)
+for (i)
     If (children[i].children === true){
         //translate all the text in the array of elements
     } else{
