@@ -1,14 +1,9 @@
 var buttonEl = document.querySelector("#buttonId");
-//var userInputEl = document.getElementById("userInputId").value;
-// var h1El = document.getElementById("h1Id").textContent;
 
-//console.log(h1El);
 
-buttonEl.addEventListener("click", function() {
-    //event.preventDefault();
-    
-    console.log(userInputEl);
-})
+var textVar = document.getElementById("h1Id").textContent;
+//console.log(textVar);
+
 
 const url = 'https://text-translator2.p.rapidapi.com/translate';
 const options = {
@@ -21,7 +16,7 @@ const options = {
 	body: new URLSearchParams({
 		source_language: 'en',
 		target_language: 'es',
-		text: document.getElementById("h1Id").textContent,
+		text: textVar,
 	})
 };
 
@@ -45,13 +40,13 @@ function getApi() {
         console.log(info);
         console.log(info.data.translatedText);
 
-        document.getElementById("h1Id").textContent = info.data.translatedText;
-        console.log(document.getElementById("h1Id").textContent);
+        var textVar = document.getElementById("h1Id").textContent;
+        textVar = info.data.translatedText;
+        console.log(textVar);
       });
     };
 
  getApi();
-
 
 /*
 for (i)
