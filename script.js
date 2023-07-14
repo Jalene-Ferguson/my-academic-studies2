@@ -1,3 +1,15 @@
+var buttonEl = document.querySelector("#buttonId");
+//var userInputEl = document.getElementById("userInputId").value;
+// var h1El = document.getElementById("h1Id").textContent;
+
+//console.log(h1El);
+
+buttonEl.addEventListener("click", function() {
+    //event.preventDefault();
+    
+    console.log(userInputEl);
+})
+
 const url = 'https://text-translator2.p.rapidapi.com/translate';
 const options = {
 	method: 'POST',
@@ -9,9 +21,10 @@ const options = {
 	body: new URLSearchParams({
 		source_language: 'en',
 		target_language: 'es',
-		text: 'What is your name?'
+		text: document.getElementById("h1Id").textContent,
 	})
 };
+
 /*
 try {
 	const response = await fetch(url, options);
@@ -22,33 +35,30 @@ try {
 }
 */
 function getApi() {
-    //var requestUrl = 'https://text-translator2.p.rapidapi.com/translate';
   
     fetch(url, options)
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
+      .then(function (info) {
         //Using console.log to examine the data
-        console.log(data);
+        console.log(info);
+        console.log(info.data.translatedText);
+
+        document.getElementById("h1Id").textContent = info.data.translatedText;
+        console.log(document.getElementById("h1Id").textContent);
       });
-    }
-/*
-        for (var i = 0; i < data.length; i++) {
-          //Creating a h3 element and a p element
-          var userName = document.createElement('h3');
-          var userUrl = document.createElement('p');
-  
-          //Setting the text of the h3 element and p element.
-          userName.textContent = data[i].login;
-          userUrl.textContent = data[i].url;
-  
-          //Appending the dynamically generated html to the div associated with the id="users"
-          //Append will attach the element as the bottom most child.
-          usersContainer.append(userName);
-          usersContainer.append(userUrl);
-        }
-      });
-  }
-  */
+    };
+
  getApi();
+
+
+/*
+for (va)
+    If (children[i].children === true){
+        //translate all the text in the array of elements
+    } else{
+        //just keep going
+    }
+*/
+
