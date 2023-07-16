@@ -1,9 +1,11 @@
-var buttonEl = document.querySelector("#buttonId");
+var bodyEl = document.body.children;
 
+var testArray = [];
 
-var textVar = document.getElementById("h1Id").textContent;
-//console.log(textVar);
-
+for (var i=0; i<bodyEl.length; i++){
+  testArray.push(bodyEl[i].textContent);
+  console.log(testArray);
+};
 
 const url = 'https://text-translator2.p.rapidapi.com/translate';
 const options = {
@@ -16,21 +18,14 @@ const options = {
 	body: new URLSearchParams({
 		source_language: 'en',
 		target_language: 'es',
-		text: textVar,
+		text: testArray,
 	})
 };
 
-/*
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
-*/
+console.log(testArray);
+
 function getApi() {
-  
+    
     fetch(url, options)
       .then(function (response) {
         return response.json();
@@ -39,21 +34,34 @@ function getApi() {
         //Using console.log to examine the data
         console.log(info);
         console.log(info.data.translatedText);
+        
+        testArray = info.data.translatedText;
+        console.log(testArray);
 
-        var textVar = document.getElementById("h1Id").textContent;
-        textVar = info.data.translatedText;
-        console.log(textVar);
+        localStorage.setItem("translatedWords", JSON.stringify(testArray));
       });
     };
 
  getApi();
+ 
+var testVar2 = JSON.parse(localStorage.getItem("translatedWords"));
+var myArray = testVar2.split(",");
+console.log(myArray[0]);
+console.log(typeof myArray);
+console.log(myArray.length);
 
 /*
-for (i)
-    If (children[i].children === true){
-        //translate all the text in the array of elements
-    } else{
-        //just keep going
-    }
+for (var i=0; i<myArray.length; i++){
+  var bodyChild1 = document.body.children[i].children
+  for (var j=0; i<bodyChild1.length)
+
+}
 */
+
+for (var i=0; i<myArray.length; i++){
+  bodyEl[i].textContent = myArray[i];
+}
+
+
+
 
