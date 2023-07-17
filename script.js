@@ -8,7 +8,6 @@ if (str.trim().length === 0) {
   alert("The string is not empty");
 }
 */
-
 var firstGen = document.body.children;
 
 var testTest = document.getElementById("testId");
@@ -92,7 +91,10 @@ for (var i=0; i<bodyEl.length; i++){
   console.log(testArray);
 };
 */
-/*
+
+var storageKey = Math.random();
+console.log(storageKey);
+
 const url = 'https://text-translator2.p.rapidapi.com/translate';
 const options = {
 	method: 'POST',
@@ -124,26 +126,92 @@ function getApi() {
         testArray = info.data.translatedText;
         console.log(testArray);
 
-        localStorage.setItem("translatedWords", JSON.stringify(testArray));
+        localStorage.setItem(storageKey, JSON.stringify(testArray));
       });
     };
 
- getApi();
- 
-var testVar2 = JSON.parse(localStorage.getItem("translatedWords"));
-var myArray = testVar2.split(",");
-console.log(myArray[0]);
-console.log(typeof myArray);
-console.log(myArray.length);
-*/
-/*
-for (var i=0; i<myArray.length; i++){
-  var bodyChild1 = document.body.children[i].children
-  for (var j=0; i<bodyChild1.length)
+getApi();
+
+var globalObject = {};
+
+setTimeout(function() { 
+  console.log(localStorage.getItem(storageKey));
+  var testVar2 = JSON.parse(localStorage.getItem(storageKey));
+  console.log(testVar2);
+  var myArray = testVar2.split(",");
+  //console.log(myArray);
+  console.log(typeof myArray);
+  console.log(myArray.length);
+
+
+console.log(myArray);
+
+var count = 0;
+
+for (var f=0; f<firstGen.length; f++){
+  try{
+    console.log(firstGen[f].childNodes[0].textContent);
+    firstGen[f].childNodes[0].textContent = myArray[count];
+    count++;
+  }
+  catch{
+    break;
+  }
+  if (firstGen[f].children.length > 0){
+    for (var g=0; g<firstGen[f].children.length; g++){
+      try{
+        firstGen[f].children[g].childNodes[0].textContent = myArray[count];
+        count++;
+      }
+      catch{
+        break;
+      }
+      if (firstGen[f].children[g].children.length > 0){
+        for (var h=0; h<firstGen[f].children[g].children.length; h++){
+          try{
+            firstGen[f].children[g].children[h].childNodes[0].textContent = myArray[count];
+            count++;
+          }
+          catch{
+            break;
+          }
+          if (firstGen[f].children[g].children[h].children.length > 0){
+            for (var i=0; i<firstGen[f].children[g].children[h].children.length; i++){
+              try{
+                firstGen[f].children[g].children[h].children[i].childNodes[0].textContent = myArray[count];
+                count++;
+              }
+              catch{
+                break;
+              }
+              if (firstGen[f].children[g].children[h].children[i].children.length > 0){
+                for (var j=0; j<firstGen[f].children[g].children[h].children[i].children.length; j++){
+                  try{
+                    firstGen[f].children[g].children[h].children[i].children[j].childNodes[0].textContent = myArray[count];
+                    count++;
+                  }
+                  catch{
+                    break;
+                  }
+                }
+              }else{
+                continue;
+              }
+            }
+          }else{
+            continue;
+          }
+        }
+      }else{
+        continue;
+      }
+    }
+  }else{
+    continue;
+  }
 
 }
-*/
-
+}, 5000); // getItem is asynchronus with setItem. It will not run properly unless there is a time lag
 /*
 for (var i=0; i<myArray.length; i++){
   bodyEl[i].textContent = myArray[i];
