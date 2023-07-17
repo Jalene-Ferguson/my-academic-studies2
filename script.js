@@ -1,12 +1,98 @@
-var bodyEl = document.body.children;
+/* document.getElementById('mainHeading').childNodes[0].nodeValue;
+
+let str = "     \n  ";  // replace with your string variable
+
+if (str.trim().length === 0) {
+  alert("The string is empty or has only whitespace");
+} else {
+  alert("The string is not empty");
+}
+*/
+
+var firstGen = document.body.children;
+
+var testTest = document.getElementById("testId");
+//console.log(testTest.childNodes[0].textContent);
+
+var checkEl = document.getElementById("checkId");
+//console.log(checkEl.children);
 
 var testArray = [];
 
+for (var a=0; a<firstGen.length; a++){
+  try{
+    testArray.push(firstGen[a].childNodes[0].textContent);  
+    console.log(testArray);
+  }
+  catch{
+    break;
+  }
+  if (firstGen[a].children.length > 0){
+    for (var b=0; b<firstGen[a].children.length; b++){ 
+      try{
+        testArray.push(firstGen[a].children[b].childNodes[0].textContent);
+        console.log(testArray);
+      }
+      catch{
+        break;
+      }
+      if (firstGen[a].children[b].children.length > 0){
+        for (var c=0; b<firstGen[a].children[b].children.length; c++){
+          try{
+            testArray.push(firstGen[a].children[b].children[c].childNodes[0].textContent);
+            console.log(testArray);
+            console.log(firstGen[a].children[b].children[c].children.length);
+          }
+          catch{
+            break;
+          }
+          if (firstGen[a].children[b].children[c].children.length > 0){ 
+            for (var d=0; d<firstGen[a].children[b].children[c].children.length; d++){
+              try{
+                  testArray.push(firstGen[a].children[b].children[c].children[d].childNodes[0].textContent);
+                  console.log(testArray);
+                }catch{
+                  break;
+                }
+                if (firstGen[a].children[b].children[c].children[d].children.length > 0){ 
+                  for (var e=0; e<firstGen[a].children[b].children[c].children[d].children.length; e++){
+                    try{
+                      testArray.push(firstGen[a].children[b].children[c].children[d].children[e].childNodes[0].textContent);
+                      console.log(testArray);
+                    }
+                    catch{
+                      break;
+                    }
+                  }
+                }else{
+                  continue;
+                }
+              }
+            }else{
+              continue;
+            }
+          }
+        }else{
+          continue;
+        }
+      }
+    }else{
+      continue;
+    }
+  }
+
+
+
+
+console.log(testArray);
+
+/*
 for (var i=0; i<bodyEl.length; i++){
   testArray.push(bodyEl[i].textContent);
   console.log(testArray);
 };
-
+*/
+/*
 const url = 'https://text-translator2.p.rapidapi.com/translate';
 const options = {
 	method: 'POST',
@@ -49,7 +135,7 @@ var myArray = testVar2.split(",");
 console.log(myArray[0]);
 console.log(typeof myArray);
 console.log(myArray.length);
-
+*/
 /*
 for (var i=0; i<myArray.length; i++){
   var bodyChild1 = document.body.children[i].children
@@ -58,10 +144,11 @@ for (var i=0; i<myArray.length; i++){
 }
 */
 
+/*
 for (var i=0; i<myArray.length; i++){
   bodyEl[i].textContent = myArray[i];
 }
-
+*/
 
 
 
