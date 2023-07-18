@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.box {
+    border: 1px solid black;
+    padding: 10px;
+}
+  
+.title-box {
+    width: 400px;
+    height: 180px;
+    margin: 0 auto;
+    margin-left: 800px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+  
+.content-box1 {
+    width: 100px;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.content-box2 {
+    width: 100px;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 90px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px; 
+    width: 80%;
+    margin-left: 210px;
+  }
+  
+  .grid-item1, .grid-item2, .grid-item3, .grid-item4 {
+    background-color: rgb(255, 255, 255); 
+    padding: 20px;
+    width: 250px; 
+    height: 150px; 
+    text-align: center;
+    border: black solid 1px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    transition: transform .3s ease;
+  }
+  
+.Math, .Chemistry, .Reading, .World {
+    font-size: 20px;
+    margin: 3px;
+    margin-top: 15px;
+    font-weight: 300;
+    text-decoration: underline;
+    display: inline;
+}
+
+.Math:hover, .Chemistry:hover, .Reading:hover, .World:hover {
+    cursor: pointer;
+}
+
+.grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item4:hover {
+    transform: scale(1.2);
+}
