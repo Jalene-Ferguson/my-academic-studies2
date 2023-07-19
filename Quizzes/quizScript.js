@@ -143,19 +143,39 @@ answersEl1.addEventListener("click", function(event) {
     console.log(points);
   });
 
-var myArray = ["Science Quiz", "An"]
+var savedSubject = "";
 
 function getQuizName(){
   if (subjectEl.textContent == "science"){
-    localStorage.setItem("science", "Science Quiz");
+    savedSubject = "Science Quiz";
+    localStorage.setItem("myKey", savedSubject);
   }
   else if (subjectEl.textContent == "animal-animal"){
-    localStorage.setItem("animal", "Animal Quiz");
+    savedSubject = "Animal Quiz";
+    localStorage.setItem("myKey", savedSubject);
   }
   else if (subjectEl.textContent == "programming"){
-    localStorage.setItem("coding", "Coding Quiz");
+    savedSubject = "Coding Quiz";
+    localStorage.setItem("myKey", savedSubject);
   }
   else if (subjectEl.textContent == "grammar"){
-    localStorage.setItem("grammar", "Science Quiz");
+    savedSubject = "Grammar Quiz";
+    localStorage.setItem("myKey", savedSubject);
+  }
+  else if (subjectEl.textContent == "history"){
+    savedSubject = "History Quiz";
+    localStorage.setItem("myKey", savedSubject);
+  }
+  else if (subjectEl.textContent == "algebra"){
+    savedSubject = "Math Quiz";
+    localStorage.setItem("myKey", savedSubject);
+  }
+  else if (subjectEl.textContent == "pop-culture"){
+    savedSubject = "Pop Culture Quiz";
+    localStorage.setItem("myKey", savedSubject);
+  }
+  else if (subjectEl.textContent == "music-theory"){
+    savedSubject = "Music Quiz";
+    localStorage.setItem("myKey", savedSubject);
   }
 }

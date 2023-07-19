@@ -4,13 +4,6 @@ window.addEventListener("load", function() {
   loader.style.display = "none";
 });
 
-
-
-
-
-
-
-
 /* document.getElementById('mainHeading').childNodes[0].nodeValue;
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -244,14 +237,13 @@ function translatePlease (myArray){
       continue;
     }
   }
-  /*for (var x=0; x<testArray.length; x++){
+  for (var x=0; x<testArray.length; x++){
   if (testArray[x].search("\n") >= 0){
     myArray.splice(x, 0, "\n");
   }
-  if (myArray[x] === ""){
-
   }
-  }*/
+  console.log(myArray);
+  console.log(firstGen.innerHTML);
 }
 
 
