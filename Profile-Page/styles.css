@@ -87,3 +87,15 @@
     background-color: lightgray;
     cursor: pointer;
 }
+
+#logout-btn {
+    border: black solid 1px;
+    border-radius: 20px;
+    margin: 3px;
+    padding: 3px;
+}
+
+#logout-btn:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
