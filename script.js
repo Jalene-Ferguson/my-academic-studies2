@@ -244,6 +244,14 @@ function translatePlease (myArray){
       continue;
     }
   }
+  /*for (var x=0; x<testArray.length; x++){
+  if (testArray[x].search("\n") >= 0){
+    myArray.splice(x, 0, "\n");
+  }
+  if (myArray[x] === ""){
+
+  }
+  }*/
 }
 
 
