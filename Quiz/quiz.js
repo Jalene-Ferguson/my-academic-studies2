@@ -1,3 +1,11 @@
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none";
+});
+
+
+
 var timerTag = document.querySelector('#timerTag');
         var timerPTag = document.querySelector('header').children[1];
         var submitScoreBtn = document.querySelector('#submitScoreBtn');

@@ -1,3 +1,17 @@
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none";
+});
+
+
+
+
+
+
+
+
+/* document.getElementById('mainHeading').childNodes[0].nodeValue;
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 var dropDownBtn = document.getElementById("dropbtn");

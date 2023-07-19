@@ -1,53 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css" />
-    <!--Third-party CSSframeworks-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--Local CSS frameworks-->
-    <link rel="stylesheet" href="./stylesheet.css" />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Sign Up and Login</title>
+  <link rel="stylesheet" href="./Assets-Index/index.css">
 </head>
-<body id="bodyId">
-    <div class="dropdown">
-        <button id="dropbtn" class="dropbtn">Language</button>
-        <div id="myDropdown" class="dropdown-content">
-            <a id="en">English</a>
-            <a id="es">Spanish</a>
-        </div>
-    </div>
-    <h1 id="h1Id" class="text-red-500">Why is the sky blue</h1>
-    <p>World</p>
-    <div id="testId">
-        <div>
-            <p>Stuff</p>
-        </div>
-    </div>
-    <div>
-        <h2 class="text-red-500">Text</h2>
-        <p>Orange</p>
-    </div>
-    <div>
-        <div>
-            <div id="checkId">
-                <p>Generation</p>
-                <p>Sun</p>
-                <p>Dog</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div>
-            <div>
-                <div>
-                    <h4>Grape</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div> </div>
-    <script src="./script.js"> </script>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <input type="text" placeholder="Username" id="signup-username" required>
+      <input type="password" placeholder="Password" id="signup-password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" placeholder="Username" id="login-username" required>
+      <input type="password" placeholder="Password" id="login-password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <button id="logout-btn" style="display: none;">Logout</button>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
