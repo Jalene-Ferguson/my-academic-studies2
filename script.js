@@ -229,10 +229,6 @@ function translatePlease (myArray){
     }else{
       continue;
     }
-    console.log(testArray);
-    console.log(testArray.length);
-    console.log(myArray);
-    console.log(testArray[0].search("\n"));
   }
 }
 
