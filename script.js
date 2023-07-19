@@ -152,102 +152,88 @@ function getApi() {
 var globalObject = {};
 
 function translatePlease (myArray){
-  setTimeout(function() {
-    //var testVar2 = JSON.parse(string);
-    //console.log(JSON.parse(string));
-    //var myArray = string.split(",");
-    console.log(myArray);
-    var count = 0;
+  console.log(myArray);
+  var count = 0;
 
-    for (var f=0; f<firstGen.length; f++){
-      console.log(document.body.innerHTML);
-      try{
-        console.log(firstGen[f].childNodes[0].textContent);
-        firstGen[f].childNodes[0].textContent = myArray[count];
-        count++;
-      }
-      catch{
-        break;
-      }
-      if (firstGen[f].children.length > 0){
-        console.log(document.body.innerHTML);
-        for (var g=0; g<firstGen[f].children.length; g++){
-          try{
-            firstGen[f].children[g].childNodes[0].textContent = myArray[count];
-            count++;
-          }
-          catch{
-            break;
-          }
-          if (f===0){
-            console.log(document.body.innerHTML);
-            console.log(firstGen[f].children[g].childNodes[0].textContent);
-          }
-          if (firstGen[f].children[g].children.length > 0){
-            console.log(document.body.innerHTML);
-            for (var h=0; h<firstGen[f].children[g].children.length; h++){
-              try{
-                firstGen[f].children[g].children[h].childNodes[0].textContent = myArray[count];
-                count++;
-              }
-              catch{
-                break;
-              }
-              if (f===0){
-                console.log(document.body.innerHTML);
-                console.log(firstGen[f].children[g].children[h].childNodes[0].textContent);
-              }
-              if (firstGen[f].children[g].children[h].children.length > 0){
-                console.log(document.body.innerHTML);
-                for (var i=0; i<firstGen[f].children[g].children[h].children.length; i++){
-                  try{
-                    firstGen[f].children[g].children[h].children[i].childNodes[0].textContent = myArray[count];
-                    count++;
-                  }
-                  catch{
-                    break;
-                  }
-                  if (firstGen[f].children[g].children[h].children[i].children.length > 0){
-                    console.log(document.body.innerHTML);
-                    for (var j=0; j<firstGen[f].children[g].children[h].children[i].children.length; j++){
-                      try{
-                        firstGen[f].children[g].children[h].children[i].children[j].childNodes[0].textContent = myArray[count];
-                        count++;
-                      }
-                      catch{
-                        break;
-                      }
-                    }
-                  }else{
-                    continue;
-                  }
-                }
-              }else{
-                continue;
-              }
-            }
-          }else{
-            continue;
-          }
-        }
-      }else{
-        continue;
-      }
-      console.log(testArray);
-      console.log(testArray.length);
-      console.log(myArray);
-      console.log(testArray[0].search("\n"));
+  for (var f=0; f<firstGen.length; f++){
+    console.log(document.body.innerHTML);
+    try{
+      console.log(firstGen[f].childNodes[0].textContent);
+      firstGen[f].childNodes[0].textContent = myArray[count];
+      count++;
     }
-    /*for (var x=0; x<testArray.length; x++){
-      console.log(testArray[x].search("\n"))
-      if (testArray[x].search("\n") === 0){
-        myArray[x].replace("", "\n");
+    catch{
+      break;
+    }
+    if (firstGen[f].children.length > 0){
+      console.log(document.body.innerHTML);
+      for (var g=0; g<firstGen[f].children.length; g++){
+        try{
+          firstGen[f].children[g].childNodes[0].textContent = myArray[count];
+          count++;
+        }
+        catch{
+          break;
+        }
+        if (f===0){
+          console.log(document.body.innerHTML);
+          console.log(firstGen[f].children[g].childNodes[0].textContent);
+        }
+        if (firstGen[f].children[g].children.length > 0){
+          console.log(document.body.innerHTML);
+          for (var h=0; h<firstGen[f].children[g].children.length; h++){
+            try{
+              firstGen[f].children[g].children[h].childNodes[0].textContent = myArray[count];
+              count++;
+            }
+            catch{
+              break;
+            }
+            if (f===0){
+              console.log(document.body.innerHTML);
+              console.log(firstGen[f].children[g].children[h].childNodes[0].textContent);
+            }
+            if (firstGen[f].children[g].children[h].children.length > 0){
+              console.log(document.body.innerHTML);
+              for (var i=0; i<firstGen[f].children[g].children[h].children.length; i++){
+                try{
+                  firstGen[f].children[g].children[h].children[i].childNodes[0].textContent = myArray[count];
+                  count++;
+                }
+                catch{
+                  break;
+                }
+                if (firstGen[f].children[g].children[h].children[i].children.length > 0){
+                  console.log(document.body.innerHTML);
+                  for (var j=0; j<firstGen[f].children[g].children[h].children[i].children.length; j++){
+                    try{
+                      firstGen[f].children[g].children[h].children[i].children[j].childNodes[0].textContent = myArray[count];
+                      count++;
+                    }
+                    catch{
+                      break;
+                    }
+                  }
+                }else{
+                  continue;
+                }
+              }
+            }else{
+              continue;
+            }
+          }
+        }else{
+          continue;
+        }
       }
-      else{
-        continue;
-      }
-      }*/
-  }, 5000); // getItem is asynchronus with setItem. It will not run properly unless there is a time lag
+    }else{
+      continue;
+    }
+    console.log(testArray);
+    console.log(testArray.length);
+    console.log(myArray);
+    console.log(testArray[0].search("\n"));
+  }
 }
 
 
