@@ -1,3 +1,16 @@
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none";
+});
+
+
+
+
+
+
+
+
 /* document.getElementById('mainHeading').childNodes[0].nodeValue;
 
 let str = "     \n  ";  // replace with your string variable
