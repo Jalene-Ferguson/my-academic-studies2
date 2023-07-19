@@ -3,47 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Academia Studies</title>
+    <title>My Academic Studio</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="./home-page.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <div class="box title-box">
-                <h2>My Academia Studies</h2>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                    Icon when menu is closed.
+        
+                    Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                    Icon when menu is open.
+        
+                    Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-shrink-0 items-center">
+                <img class="h-8 w-auto" src="../Assets-Index/grad-cap.jpeg" alt="Your Company">
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <button class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"><a href="../Home-Page/home-page.html">Home</a></button>
+                    <button class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><a href="../Profile-Page/pofile.html">Profile</a></button>
+                    <div class="dropdown">
+                        <button id="dropbtn" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium dropbtn">Language</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a id="en">English</a>
+                            <a id="es">Spanish</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+                </button>
+        
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                <div>
+                    <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full" src="../Assets-Index/profile.jpeg" alt="">
+                    </button>
+                </div>
+            </div>
+            </div>
             </div>
         </div>
-        <div class="top-right">
-            <div class="box content-box1">
-                <h3>Profile</h3>
+        
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
             </div>
-            <div class="box content-box2">
-                <h3>Language</h3>
+        </div>
+    </nav>
+    <main>
+        <section class="bg-center bg-no-repeat bg-[url('../Assets-Index/library.jpeg')] bg-gray-700 bg-blend-multiply">
+            <div class="mx-auto max-w-screen-xl text-center p-0 lg:py-56">
+                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Welcome to My Academic Studio</h1>
+                <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at My Academic Studio, we put the "back" in "to school". Let us do the heavy lifting while you sit back, have a coffee, and enjoy a quiz or two.</p>
             </div>
-        </div>      
-    </div>
-    <div class="grid-container">
-        <div class="grid-item1">Math
-            <br><p class="Math">Beginner</p>
-            <br><p class="Math">Intermediate</p>
-            <br><p class="Math">Advanced</p>
+            <div href="" class="grid grid-cols-4 gap-4 place-items-center">
+                <a href="../Quizzes/math.html" class="grid-item1 font-mono font-extrabold text-white bg-[url('../Assets-Index/algebra.jpeg')]">Algebra</a>
+                <a href="../Quizzes/sciQuiz.html" class="grid-item2 font-mono font-extrabold text-white bg-[url('../Assets-Index/science.jpeg')]">Science</a>
+                <div class="grid-item3 font-mono font-extrabold text-white bg-[url('../Assets-Index/grammar.jpeg')]">Grammar</div>
+                <div class="grid-item4 font-mono font-extrabold text-white bg-[url('../Assets-Index/history.jpeg')]">History</div>
+                <div class="grid-item1 font-mono font-extrabold text-white bg-[url('../Assets-Index/coding.jpeg')]">Coding</div>
+                <div class="grid-item2 font-mono font-extrabold text-white bg-[url('../Assets-Index/animals.jpeg')]">Animals</div>
+                <div class="grid-item3 font-mono font-extrabold text-white bg-[url('../Assets-Index/music.jpeg')]">Music</div>
+                <div class="grid-item4 font-mono font-extrabold text-white bg-[url('../Assets-Index/popculture.jpeg')]">Pop culture</div>
+            </div>
+        </section>
+
+    </main>
+    <footer
+        class="bg-gray-800 text-center dark:bg-neutral-700 lg:text-left">
+        <div class="p-4 text-center text-white dark:text-neutral-200">
+        © 2023 Copyright:
+        <a
+            class="text-neutral-400"
+            >My Academic Studio</a
+        >
         </div>
-        <div class="grid-item2">Chemistry
-            <br><p class="Chemistry">Beginner</p>
-            <br><p class="Chemistry">Intermediate</p>
-            <br><p class="Chemistry">Advanced</p>
-        </div>
-        <div class="grid-item3">Reading
-            <br><p class="Reading">Beginner</p>
-            <br><p class="Reading">Intermediate</p>
-            <br><p class="Reading">Advanced</p>
-        </div>
-        <div class="grid-item4">World History
-            <br><p class="World">Beginner</p>
-            <br><p class="World">Intermediate</p>
-            <br><p class="World">Advanced</p>
-        </div>
-      </div>
+    </footer>
     <script src="./home-page.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
