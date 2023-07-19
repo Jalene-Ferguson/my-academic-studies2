@@ -2,6 +2,7 @@ var homeEl = document.querySelector("#homeId");
 var mainEl = document.querySelector("#mainId");
 var scoreEl = document.querySelector("#scoreId");
 var congrats = document.querySelector("#congrats");
+var quizNameEl = document.querySelector("#quizNameId");
 var subjectEl = document.querySelector("#subjectId");
 subjectEl.style.fontSize = "1px";
 subjectEl.style.color = "white";
@@ -119,6 +120,9 @@ answersEl1.addEventListener("click", function(event) {
     }
     // Check if the clicked element was a button
     if (element.matches("button")) {
+
+      localStorage.setItem("totalPoints", points)
+      getQuizName();
       element.style.backgroundColor = "rgb(59 130 246)";
       element.style.color = "white";
 
@@ -135,8 +139,23 @@ answersEl1.addEventListener("click", function(event) {
 
     // Call the function to fetch and embed the calculus video
     fetchAndEmbedVideo();
-    fetchAndEmbedVideo();
     }
     console.log(points);
   });
 
+var myArray = ["Science Quiz", "An"]
+
+function getQuizName(){
+  if (subjectEl.textContent == "science"){
+    localStorage.setItem("science", "Science Quiz");
+  }
+  else if (subjectEl.textContent == "animal-animal"){
+    localStorage.setItem("animal", "Animal Quiz");
+  }
+  else if (subjectEl.textContent == "programming"){
+    localStorage.setItem("coding", "Coding Quiz");
+  }
+  else if (subjectEl.textContent == "grammar"){
+    localStorage.setItem("grammar", "Science Quiz");
+  }
+}
