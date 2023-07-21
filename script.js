@@ -145,7 +145,7 @@ function getApi() {
       })
       .then(function (info) {
         //Using console.log to examine the data
-        dataString = info.data.translatedText;
+        var dataString = info.data.translatedText;
         //testArray = testArray.replace("\n", "");
         dataString.trim();
         var translatedArr = dataString.split(",");
@@ -237,11 +237,11 @@ function translatePlease (myArray){
       continue;
     }
   }
-  for (var x=0; x<testArray.length; x++){
+  /*for (var x=0; x<testArray.length; x++){
   if (testArray[x].search("\n") >= 0){
     myArray.splice(x, 0, "\n");
   }
-  }
+  }*/
   console.log(myArray);
   console.log(firstGen.innerHTML);
 }
