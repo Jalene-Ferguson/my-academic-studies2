@@ -4,13 +4,6 @@ window.addEventListener("load", function() {
   loader.style.display = "none";
 });
 
-
-
-
-
-
-
-
 /* document.getElementById('mainHeading').childNodes[0].nodeValue;
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -152,7 +145,7 @@ function getApi() {
       })
       .then(function (info) {
         //Using console.log to examine the data
-        dataString = info.data.translatedText;
+        var dataString = info.data.translatedText;
         //testArray = testArray.replace("\n", "");
         dataString.trim();
         var translatedArr = dataString.split(",");
@@ -248,10 +241,9 @@ function translatePlease (myArray){
   if (testArray[x].search("\n") >= 0){
     myArray.splice(x, 0, "\n");
   }
-  if (myArray[x] === ""){
-
-  }
   }*/
+  console.log(myArray);
+  console.log(firstGen.innerHTML);
 }
 
 

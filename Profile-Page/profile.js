@@ -4,6 +4,10 @@ var scoreEl = document.querySelector("#scoreId");
 var points = localStorage.getItem("totalPoints");
 console.log(points);
 scoreEl.textContent = points;
+
+var savedSubject = localStorage.getItem("myKey");
+quizTakenEl.textContent = savedSubject;
+
 document.addEventListener('DOMContentLoaded', () => {
   const logoutBtn = document.getElementById('logout-btn');
 
