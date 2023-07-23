@@ -1,9 +1,9 @@
-var loader = document.getElementById("preloader");
+/*var loader = document.getElementById("preloader");
 
 window.addEventListener("load", function() {
   loader.style.display = "none";
 });
-
+*/
 /* document.getElementById('mainHeading').childNodes[0].nodeValue;
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -129,7 +129,7 @@ function getApi() {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
-      'X-RapidAPI-Key': '99e1fcd984msh7e804bff0d5f7a3p1a7b7bjsnea74dc20744b',
+      'X-RapidAPI-Key': '6d9abf94c1msh8b6a3242b6cd020p1626b8jsn135637a479c2',
       'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
     },
     body: new URLSearchParams({
