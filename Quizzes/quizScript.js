@@ -3,15 +3,18 @@ var mainEl = document.querySelector("#mainId");
 var scoreEl = document.querySelector("#scoreId");
 var congrats = document.querySelector("#congrats");
 var quizNameEl = document.querySelector("#quizNameId");
+
 var subjectEl = document.querySelector("#subjectId");
 subjectEl.style.fontSize = "1px";
 subjectEl.style.color = "white";
 var subject = subjectEl.textContent;
 
+var finishEl = document.querySelector("#finishId");
+
 var correctEl1 = document.querySelector("#correct1");
 var correctEl2 = document.querySelector("#correct2");
 var correctEl3 = document.querySelector("#correct3");
-var correctEl4 = document.querySelector("#correc4");
+var correctEl4 = document.querySelector("#correct4");
 var correctEl5 = document.querySelector("#correct5");
 
 var answersEl1 = document.querySelector("#answers1");
@@ -61,8 +64,17 @@ answersEl1.addEventListener("click", function(event) {
   
     // Check if the clicked element was a button
     if (element.matches("button")) {
-      element.style.backgroundColor = "rgb(59 130 246)";
-      element.style.color = "white";
+      if (element == correctEl1){
+        element.style.backgroundColor = "green";
+        element.style.color = "white";
+      }
+      else{
+        correctEl1.style.backgroundColor = "green"
+        correctEl1.style.color = "white";
+
+        element.style.backgroundColor = "red";
+        element.style.color = "white";
+      }
     }
 
     if (element == correctEl1){
@@ -75,8 +87,17 @@ answersEl1.addEventListener("click", function(event) {
   
     // Check if the clicked element was a button
     if (element.matches("button")) {
-      element.style.backgroundColor = "rgb(59 130 246)";
-      element.style.color = "white";
+      if (element == correctEl2){
+        element.style.backgroundColor = "green";
+        element.style.color = "white";
+      }
+      else{
+        correctEl2.style.backgroundColor = "green"
+        correctEl2.style.color = "white";
+
+        element.style.backgroundColor = "red";
+        element.style.color = "white";
+      }
     }
 
     if (element == correctEl2){
@@ -89,8 +110,17 @@ answersEl1.addEventListener("click", function(event) {
   
     // Check if the clicked element was a button
     if (element.matches("button")) {
-      element.style.backgroundColor = "rgb(59 130 246)";
-      element.style.color = "white";
+      if (element == correctEl3){
+        element.style.backgroundColor = "green";
+        element.style.color = "white";
+      }
+      else{
+        correctEl3.style.backgroundColor = "green"
+        correctEl3.style.color = "white";
+
+        element.style.backgroundColor = "red";
+        element.style.color = "white";
+      }
     }
 
     if (element == correctEl3){
@@ -103,8 +133,17 @@ answersEl1.addEventListener("click", function(event) {
   
     // Check if the clicked element was a button
     if (element.matches("button")) {
-      element.style.backgroundColor = "rgb(59 130 246)";
-      element.style.color = "white";
+      if (element == correctEl4){
+        element.style.backgroundColor = "green";
+        element.style.color = "white";
+      }
+      else{
+        correctEl4.style.backgroundColor = "green"
+        correctEl4.style.color = "white";
+
+        element.style.backgroundColor = "red";
+        element.style.color = "white";
+      }
     }
 
     if (element == correctEl4){
@@ -123,25 +162,34 @@ answersEl1.addEventListener("click", function(event) {
 
       localStorage.setItem("totalPoints", points)
       getQuizName();
-      element.style.backgroundColor = "rgb(59 130 246)";
-      element.style.color = "white";
+      if (element == correctEl5){
+        element.style.backgroundColor = "green";
+        element.style.color = "white";
+      }
+      else{
+        correctEl5.style.backgroundColor = "green"
+        correctEl5.style.color = "white";
 
-      mainEl.textContent = "";
-
-      congrats.style.color = "black";
-      congrats.style.fontFamily = "monospace";
-      congrats.style.fontSize = "50px";
-      congrats.style.textAlign = "center";
-
-      scoreEl.textContent = points + "/5";
-      scoreEl.style.fontSize = "30px";
-      scoreEl.style.textAlign = "center";
-
-    // Call the function to fetch and embed the calculus video
-    fetchAndEmbedVideo();
+        element.style.backgroundColor = "red";
+        element.style.color = "white";
+      }
     }
-    console.log(points);
   });
+
+finishEl.addEventListener("click", function(){
+  mainEl.textContent = "";
+
+  congrats.style.color = "black";
+  congrats.style.fontFamily = "monospace";
+  congrats.style.fontSize = "50px";
+  congrats.style.textAlign = "center";
+
+  scoreEl.textContent = points + "/5";
+  scoreEl.style.fontSize = "30px";
+  scoreEl.style.textAlign = "center";
+
+fetchAndEmbedVideo();
+});
 
 var savedSubject = "";
 
