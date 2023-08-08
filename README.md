@@ -8,10 +8,10 @@ My Academic Studies is designed to elevate students' learning experience through
 N/A
 
 ## Usage
-
+N/A
 
 ## License
 N/A
 
 ## Screenshot
-
+![alt text](./Assets-Index/_Users_jalene._Documents_UCF_projects_my-academic-studies2_home-page_home-page.html.png)
